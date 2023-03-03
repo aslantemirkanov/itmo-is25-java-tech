@@ -10,6 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+
+/**
+ * Класс Client представляет собой клиента банка.
+ * У клиента есть паспорт, номер телефона, уникальный идентификатор, имя, фамилия, статус верификации и список уведомлений.
+ */
 public class Client {
     @Nullable
     private Passport passport;
@@ -21,6 +26,15 @@ public class Client {
     private int verificationStatus;
     private List<String> notifications;
 
+    /**
+     * Создает нового клиента с заданными именем, фамилией, паспортом, номером телефона и статусом верификации.
+     *
+     * @param newFirstName          имя клиента
+     * @param newSecondName         фамилия клиента
+     * @param newPassport           паспорт клиента
+     * @param newPhoneNumber        номер телефона клиента
+     * @param newVerificationStatus статус верификации клиента
+     */
     private Client(String newFirstName,
                    String newSecondName,
                    @Nullable Passport newPassport,
@@ -35,8 +49,17 @@ public class Client {
         notifications = new ArrayList<String>();
     }
 
+    /**
+     * Статический класс-строитель для создания новых клиентов.
+     */
     public static ClientBuilder builder;
 
+    /**
+     * Добавляет паспорт клиенту с заданным номером серии.
+     *
+     * @param passportSeries номер серии паспорта клиента
+     * @throws WrongPassportSeriesException если номер серии паспорта некорректен
+     */
     public void addPassport(String passportSeries) {
         if (passportSeries.isEmpty()) {
             throw new WrongPassportSeriesException(passportSeries);
@@ -46,6 +69,12 @@ public class Client {
         verificationStatus = (phoneNumber == null ? 2 : 3);
     }
 
+    /**
+     * Добавляет номер телефона клиенту.
+     *
+     * @param newPhoneNumber номер телефона клиента
+     * @throws WrongPhoneNumberException если номер телефона некорректен
+     */
     public void addPhoneNumber(String newPhoneNumber) {
         if (newPhoneNumber.isEmpty()) {
             throw new WrongPhoneNumberException(newPhoneNumber);
@@ -55,34 +84,74 @@ public class Client {
         verificationStatus = (passport == null ? 1 : 3);
     }
 
+    /**
+     * Добавляет уведомление для клиента.
+     *
+     * @param notification уведомление для клиента
+     */
     public void getNotification(String notification) {
         notifications.add(notification);
     }
 
+    /**
+     * Возвращает статус верификации клиента.
+     *
+     * @return статус верификации клиента
+     */
     public int getVerificationStatus() {
         return verificationStatus;
     }
 
+    /**
+     * Возвращает номер телефона клиента.
+     *
+     * @return номер телефона клиента
+     */
     public @Nullable PhoneNumber getPhoneNumber() {
         return phoneNumber;
     }
 
+    /**
+     * Возвращает паспорт клиента.
+     *
+     * @return паспорт клиента
+     */
     public @Nullable Passport getPassport() {
         return passport;
     }
 
+    /**
+     * Возвращает полное имя клиента.
+     *
+     * @return полное имя клиента в формате "firstName secondName"
+     */
     public String getName() {
         return firstName + " " + secondName;
     }
 
+    /**
+     * Возвращает идентификатор клиента.
+     *
+     * @return идентификатор клиента в формате UUID
+     */
     public UUID getId() {
         return clientId;
     }
 
+    /**
+     * Возвращает список уведомлений клиента.
+     *
+     * @return список уведомлений клиента в формате List<String>
+     */
     public List<String> showNotifications() {
         return notifications;
     }
 
+    /**
+     * Возвращает строковое представление объекта клиента.
+     *
+     * @return строковое представление объекта клиента
+     */
     @Override
     public String toString() {
         String res =
@@ -108,7 +177,7 @@ public class Client {
             verificationStatus = 0;
         }
 
-    public ClientBuilder addFirstName(String newFirstName) {
+        public ClientBuilder addFirstName(String newFirstName) {
             firstName = newFirstName;
             return this;
         }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="bankstests.BanksTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-03-03T20:38:44" hostname="LAPTOP-ASLAN" time="0.035">
+<testsuite name="bankstests.BanksTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-03-03T23:47:39" hostname="LAPTOP-ASLAN" time="0.03">
   <properties/>
-  <testcase name="undoTransaction()" classname="bankstests.BanksTests" time="0.021"/>
+  <testcase name="undoTransaction()" classname="bankstests.BanksTests" time="0.018"/>
   <testcase name="transferBetweenBank()" classname="bankstests.BanksTests" time="0.001"/>
   <testcase name="replenishmentTransaction()" classname="bankstests.BanksTests" time="0.001"/>
   <testcase name="transferInBank()" classname="bankstests.BanksTests" time="0.004"/>
