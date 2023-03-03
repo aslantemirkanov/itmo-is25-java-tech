@@ -78,7 +78,7 @@ public class BanksConsole {
                 .addCreditLimit(1000)
                 .addCreditInterestRate(10)
                 .addDebitInterestRate(3)
-                .addDepositInterestRate(new TreeMap<Double, Double>() {
+                .addDepositInterestRate(new TreeMap<>() {
                     {
                         put(200.0, 1.0);
                     }
@@ -109,7 +109,7 @@ public class BanksConsole {
                 .addCreditLimit(2000)
                 .addCreditInterestRate(20)
                 .addDebitInterestRate(5)
-                .addDepositInterestRate(new TreeMap<Double, Double>() {
+                .addDepositInterestRate(new TreeMap<>() {
                     {
                         put(100.0, 2.0);
                     }
@@ -143,7 +143,7 @@ public class BanksConsole {
             String inputCommand = scanner.nextLine();
 
             switch (inputCommand) {
-                case "1":
+                case "1" -> {
                     Bank.BankBuilder bankBuilder = new Bank.BankBuilder();
                     System.out.println("Input bank name:");
                     bankBuilder.addName(scanner.nextLine());
@@ -155,7 +155,6 @@ public class BanksConsole {
                     bankBuilder.addCreditLimit(Double.parseDouble(scanner.nextLine()));
                     System.out.println("Input Suspicious Account Limit");
                     bankBuilder.addSuspiciousAccountLimit(Double.parseDouble(scanner.nextLine()));
-
                     SortedMap<Double, Double> deposit = new TreeMap<>();
                     while (true) {
                         System.out.println(">Input minimal value for deposit rate:");
@@ -173,17 +172,21 @@ public class BanksConsole {
                     Bank newBank = bankBuilder.build();
                     centralBank.registerBank(newBank);
                     System.out.printf("You created bank %s with Id = %d\n", newBank.getName(), newBank.GetBankId());
-                    break;
-                case "2":
-                    for (Bank bank : centralBank.getBanksList()) {
-                        System.out.printf("Name: %s\nId: %d\n", bank.getName(), bank.GetBankId());
+                }
+                case "2" -> {
+                    for (Bank curBank : centralBank.getBanksList()) {
+                        System.out.printf("Name: " +
+                                curBank.getName() +
+                                "\nId: " +
+                                curBank.GetBankId().toString()
+                                + "\n");
                     }
-                    break;
-                case "3":
+                }
+                case "3" -> {
                     centralBank.addMonthInterest();
                     System.out.println("Interest payed");
-                    break;
-                case "4":
+                }
+                case "4" -> {
                     System.out.println("Input bank Id to chose it");
                     String id = scanner.nextLine();
                     for (Bank bank : centralBank.getBanksList()) {
@@ -193,24 +196,21 @@ public class BanksConsole {
                     }
                     if (currentBank == null) {
                         System.out.println("You didn't chose bank");
-                        break;
                     }
-                    break;
-                case "5":
+                }
+                case "5" -> {
                     if (currentBank == null) {
                         System.out.println("You didn't chose bank");
                         break;
                     }
                     concreteBankMenu(currentBank);
-                    break;
-                case "6":
+                }
+                case "6" -> {
                     int dayCount = Integer.parseInt(scanner.nextLine());
                     MyTimer timer = new MyTimer();
                     timer.rewindTime(dayCount);
-                    break;
-                case "7":
-                    isFinished = true;
-                    break;
+                }
+                case "7" -> isFinished = true;
             }
         }
     }
