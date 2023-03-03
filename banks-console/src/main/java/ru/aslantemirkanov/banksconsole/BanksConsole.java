@@ -30,7 +30,7 @@ public class BanksConsole {
                 .addFirstName("aslan")
                 .addSecondName("temirkanov")
                 .addPassport(new Passport("8317343567"))
-                .addPhoneNumber(new PhoneNumber("+79999999999"))
+                .addPhoneNumber(new PhoneNumber("89969174661"))
                 .build();
     }
 }

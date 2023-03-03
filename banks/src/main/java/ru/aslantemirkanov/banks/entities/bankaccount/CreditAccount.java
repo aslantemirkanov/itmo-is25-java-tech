@@ -31,8 +31,7 @@ public class CreditAccount implements BankAccount {
             double interestRate,
             double creditLimit,
             double balance,
-            AccountType accountType)
-    {
+            AccountType accountType) {
         this.bank = bank;
         this.client = client;
         this.balance = balance;
@@ -44,6 +43,7 @@ public class CreditAccount implements BankAccount {
         this.lendMoney = 0;
         this.transactions = new ArrayList<TransactionLog>();
     }
+
 
     @Override
     public void fillUpMoney(double moneyAmount) {
@@ -83,13 +83,11 @@ public class CreditAccount implements BankAccount {
         return accountType;
     }
 
-    public void changeCreditLimit(double newCreditLimit)
-    {
+    public void changeCreditLimit(double newCreditLimit) {
         creditLimit = newCreditLimit;
     }
 
-    public void changeCreditInterest(double newCreditInterest)
-    {
+    public void changeCreditInterest(double newCreditInterest) {
         interestRate = newCreditInterest;
     }
 
