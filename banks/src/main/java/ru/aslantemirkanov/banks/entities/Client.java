@@ -162,6 +162,9 @@ public class Client {
         return res;
     }
 
+    /**
+     * Внутренний класс для создания объекта клиента с использованием шаблона проектирования "Builder".
+     */
     public static class ClientBuilder {
         private Passport passport;
         private PhoneNumber phoneNumber;
@@ -169,6 +172,11 @@ public class Client {
         private String secondName;
         private int verificationStatus;
 
+        /**
+         * Создает объект класса ClientBuilder со значениями по умолчанию.
+         * firstName, secondName, passport, phoneNumber установлены в null,
+         * verificationStatus установлен в 0.
+         */
         public ClientBuilder() {
             firstName = null;
             secondName = null;
@@ -177,27 +185,58 @@ public class Client {
             verificationStatus = 0;
         }
 
+        /**
+         * Устанавливает имя клиента.
+         *
+         * @param newFirstName новое имя клиента
+         * @return объект ClientBuilder с установленным именем клиента
+         */
         public ClientBuilder addFirstName(String newFirstName) {
             firstName = newFirstName;
             return this;
         }
 
+        /**
+         * Устанавливает фамилию клиента.
+         *
+         * @param newSecondName новая фамилия клиента
+         * @return объект ClientBuilder с установленной фамилией клиента
+         */
         public ClientBuilder addSecondName(String newSecondName) {
             secondName = newSecondName;
             return this;
         }
 
+        /**
+         * Устанавливает паспортные данные клиента.
+         *
+         * @param newPassport объект Passport с новыми паспортными данными
+         * @return объект ClientBuilder с установленными паспортными данными клиента
+         */
         public ClientBuilder addPassport(Passport newPassport) {
             passport = (newPassport.GetPassport().isEmpty() ? null : newPassport);
 
             return this;
         }
 
+        /**
+         * Устанавливает номер телефона клиента.
+         *
+         * @param newPhoneNumber объект PhoneNumber с новым номером телефона
+         * @return объект ClientBuilder с установленным номером телефона клиента
+         */
         public ClientBuilder addPhoneNumber(PhoneNumber newPhoneNumber) {
             phoneNumber = (newPhoneNumber.GetPhoneNumber().isEmpty() ? null : newPhoneNumber);
 
             return this;
         }
+
+        /**
+         * Создает и возвращает объект класса Client с установленными значениями.
+         * Устанавливает verificationStatus в соответствии с наличием паспорта и/или номера телефона.
+         *
+         * @return объект Client с установленными значениями
+         */
 
         public Client build() {
             if (passport == null && phoneNumber != null) {

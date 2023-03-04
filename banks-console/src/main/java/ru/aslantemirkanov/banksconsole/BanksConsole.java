@@ -19,6 +19,9 @@ import ru.aslantemirkanov.banks.entities.trancations.Transaction;
 import java.util.*;
 
 public class BanksConsole {
+    /**
+     * Приветственное меню для общего интерфейса
+     */
     private static void welcomeMenu() {
         System.out.println("Welcome to bank system!");
         System.out.println("1 - Create bank");
@@ -30,6 +33,11 @@ public class BanksConsole {
         System.out.println("7 - Exit");
     }
 
+    /**
+     * Приветственное меню для конкретного банка
+     *
+     * @param bankName конкретнный банк
+     */
     private static void welcomeConcreteBankMenu(String bankName) {
         System.out.println("Welcome to bank " + bankName + " system!");
         System.out.println("1 - Create client");
@@ -42,6 +50,11 @@ public class BanksConsole {
         System.out.println("8 - Exit");
     }
 
+    /**
+     * Приветственное меню для конткрентого плиента
+     *
+     * @param clientName конкретный клиент
+     */
     private static void welcomeConcreteClientMenu(String clientName) {
         System.out.println("Hello, " + clientName + "!");
         System.out.println("1 - Add passport");
@@ -57,6 +70,11 @@ public class BanksConsole {
         System.out.println("11 - Exit");
     }
 
+    /**
+     * Точка входа в программу. В данном случае консоль
+     *
+     * @param argc аргументы командной строки
+     */
     public static void main(String[] argc) {
         var centralBank = CentralBank.getInstance();
         Client aslan = new Client
@@ -215,6 +233,11 @@ public class BanksConsole {
         }
     }
 
+    /**
+     * Реализация обработки случаев работы с конкретным банком
+     *
+     * @param bank конкретный банк
+     */
     private static void concreteBankMenu(Bank bank) {
         Client currentClient = null;
         boolean isFinished = false;
@@ -316,6 +339,12 @@ public class BanksConsole {
         }
     }
 
+    /**
+     * Реализация обработки случаев работы с кокретным клиентом
+     *
+     * @param bank   конкретный банк клиента
+     * @param client конкретный клиент
+     */
     private static void concreteClientMenu(Bank bank, Client client) {
         boolean isFinished = false;
         Scanner scanner = new Scanner(System.in);

@@ -1,5 +1,6 @@
 package ru.aslantemirkanov.banks.entities.notifications;
 
+
 public enum ChangeType {
     CreditLimit,
     CreditInterest,
