@@ -30,4 +30,8 @@ public class CatOwnerController {
     public List<CatDto> getCatsById(long id){
         return catOwnerService.getCatsById(id);
     }
+
+    public void deleteCatOwner(long id){
+        catOwnerService.deleteCatOwner(id);
+    }
 }

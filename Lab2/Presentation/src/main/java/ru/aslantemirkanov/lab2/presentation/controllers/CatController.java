@@ -27,6 +27,10 @@ public class CatController {
         catService.addFriend(idFirst, idSecond);
     }
 
+    public void deleteCat(long id){
+        catService.deleteCat(id);
+    }
+
     public List<CatDto> getAllFriends(long id) {
         return catService.getAllFriends(id);
     }

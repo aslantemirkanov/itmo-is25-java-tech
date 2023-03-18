@@ -9,7 +9,7 @@ import java.util.Set;
 
 public class CatPostgreDAO implements CatDAO {
     @Override
-    public Set<Cat> findAllFrineds(Cat cat) {
+    public Set<Cat> findAllFriends(Cat cat) {
         return cat.getCatFriends();
     }
 

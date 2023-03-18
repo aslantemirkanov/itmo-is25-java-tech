@@ -4,26 +4,36 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import ru.aslantemirkanov.lab2.application.dto.CatColorDto;
 import ru.aslantemirkanov.lab2.application.dto.CatDto;
+import ru.aslantemirkanov.lab2.application.dto.CatOwnerDto;
+import ru.aslantemirkanov.lab2.application.services.CatOwnerService;
 import ru.aslantemirkanov.lab2.application.services.CatService;
+import ru.aslantemirkanov.lab2.dataaccess.dao.CatDAO;
+import ru.aslantemirkanov.lab2.dataaccess.dao.CatOwnerDAO;
+import ru.aslantemirkanov.lab2.dataaccess.dao.CatOwnerPostgreDAO;
+import ru.aslantemirkanov.lab2.dataaccess.dao.CatPostgreDAO;
+import ru.aslantemirkanov.lab2.dataaccess.entities.Cat;
+import ru.aslantemirkanov.lab2.dataaccess.entities.CatColor;
+import ru.aslantemirkanov.lab2.dataaccess.entities.CatOwner;
 import ru.aslantemirkanov.lab2.presentation.controllers.CatController;
+import ru.aslantemirkanov.lab2.presentation.controllers.CatOwnerController;
 
 import java.time.LocalDate;
 
 public class CatControllerTest {
     @Test
     void TestCats(){
-        CatController catController = Mockito.mock(CatController.class);
-        CatDto vovchik = new CatDto("vova", "british", CatColorDto.Red, LocalDate.now());
-        Mockito.when(catController.createCat("vova", "british", CatColorDto.Red, LocalDate.now()))
-                .thenReturn(vovchik);
-        vovchik.setId(1);
-    }
-/*    @Test
-    void TestCatCreating() {
         CatController catController = new CatController();
-        CatDto vova = catController.createCat("vova", "british", CatColorDto.Red, LocalDate.now());
-        long id = vova.getId();
-        CatDto catTest = catController.findById(id);
-        assert(vova.equals(catTest));
-    }*/
+        CatOwnerController catOwnerController = new CatOwnerController();
+
+        CatDAO catDAO = Mockito.mock(CatPostgreDAO.class);
+        CatOwnerDAO catOwnerDAO = Mockito.mock(CatOwnerPostgreDAO.class);
+        Cat cat = new Cat("vova111", "british", CatColor.Red, LocalDate.now());
+        cat.setId(1);
+        CatOwner catOwner = new CatOwner("aslan111", LocalDate.now());
+        catOwner.setId(1);
+        Mockito.when(catDAO.insertCat(cat)).thenReturn(cat.getId());
+        Mockito.when(catOwnerDAO.insertCatOwner(catOwner)).thenReturn(catOwner.getId());
+        Assertions.assertEquals(cat.getId(), 1);
+
+    }
 }

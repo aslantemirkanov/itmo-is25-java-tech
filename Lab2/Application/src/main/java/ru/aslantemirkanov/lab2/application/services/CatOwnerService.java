@@ -92,5 +92,9 @@ public class CatOwnerService {
         return catDtoList;
     }
 
+    public void deleteCatOwner(long id){
+        catOwnerDAO.deleteCatOwner(catOwnerDAO.findById(id));
+    }
+
 
 }

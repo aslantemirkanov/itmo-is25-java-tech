@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 public interface CatDAO {
-    Set<Cat> findAllFrineds(Cat cat);
+    Set<Cat> findAllFriends(Cat cat);
     Cat findById(long id);
     long insertCat(Cat cat);
     void updateCat(Cat cat);

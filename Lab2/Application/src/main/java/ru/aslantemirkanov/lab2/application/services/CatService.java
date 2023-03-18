@@ -29,7 +29,7 @@ public class CatService {
     }
 
     public List<CatDto> getAllFriends(long id) {
-        Set<Cat> catList = catDAO.findAllFrineds(catDAO.findById(id));
+        Set<Cat> catList = catDAO.findAllFriends(catDAO.findById(id));
         List<CatDto> catDtoList = new ArrayList<>();
         for (Cat cat : catList) {
             catDtoList.add(new CatDto(cat.getName(), cat.getBreed(), colorTransferBack(cat.getColor()), cat.getBirthDate(), cat.getId()));
@@ -70,5 +70,9 @@ public class CatService {
                 colorTransferBack(cat.getColor()),
                 cat.getBirthDate(),
                 cat.getId());
+    }
+
+    public void deleteCat(long id){
+        catDAO.deleteCat(catDAO.findById(id));
     }
 }
