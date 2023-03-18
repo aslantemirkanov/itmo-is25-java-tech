@@ -6,11 +6,14 @@
   <session-factory>
     <property name="connection.url">jdbc:postgresql://localhost:5432/Lab2</property>
     <property name="connection.driver_class">org.postgresql.Driver</property>
+    <!--<property name="connection.driver_class">org.h2.Driver</property>
+    <property name="connection.url">jdbc:h2:mem:test</property>-->
     <property name="connection.username">root</property>
     <property name="connection.password">root</property>
-    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+    <!--<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>-->
     <property name="hibernate.hbm2ddl.auto">update</property>
     <mapping class="ru.aslantemirkanov.lab2.dataaccess.entities.Cat"/>
     <mapping class="ru.aslantemirkanov.lab2.dataaccess.entities.CatOwner"/>
   </session-factory>
 </hibernate-configuration>
+

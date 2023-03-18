@@ -17,7 +17,7 @@ dependencies {
     implementation("org.hibernate:hibernate-core:6.1.7.Final")
     // https://mvnrepository.com/artifact/org.postgresql/postgresql
     implementation("org.postgresql:postgresql:42.5.4")
-    testImplementation("com.h2database:h2:2.1.214")
+    /*testImplementation("com.h2database:h2:2.1.212")*/
 }
 
 tasks.getByName<Test>("test") {
