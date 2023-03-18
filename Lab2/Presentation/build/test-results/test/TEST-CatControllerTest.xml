@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CatControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-18T02:10:51" hostname="LAPTOP-ASLAN" time="2.034">
+  <properties/>
+  <testcase name="TestCatCreating()" classname="CatControllerTest" time="2.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[мар. 18, 2023 5:10:51 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate ORM core version 6.1.7.Final
+мар. 18, 2023 5:10:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+WARN: HHH10001002: Using built-in connection pool (not intended for production use)
+мар. 18, 2023 5:10:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+мар. 18, 2023 5:10:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/Lab2]
+мар. 18, 2023 5:10:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001001: Connection properties: {password=****, user=root}
+мар. 18, 2023 5:10:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl buildCreator
+INFO: HHH10001003: Autocommit mode: false
+мар. 18, 2023 5:10:51 AM org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections <init>
+INFO: HHH10001115: Connection pool size: 20 (min=1)
+мар. 18, 2023 5:10:52 AM org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl logSelectedDialect
+INFO: HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+мар. 18, 2023 5:10:52 AM org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl getIsolatedConnection
+INFO: HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2478b629] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+мар. 18, 2023 5:10:53 AM org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator initiateService
+INFO: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+]]></system-err>
+</testsuite>
