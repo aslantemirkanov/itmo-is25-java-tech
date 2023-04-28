@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-28T15:47:23" hostname="LAPTOP-ASLAN" time="0.003">
+<testsuite name="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-28T15:54:39" hostname="LAPTOP-ASLAN" time="0.04">
   <properties/>
-  <testcase name="createOwnerTest()" classname="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" time="0.003"/>
-  <system-out><![CDATA[2023-04-28T18:47:23.345+03:00  INFO 14152 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest]: CatOwnerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-04-28T18:47:23.347+03:00  INFO 14152 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration ru.aslantemirkanov.lab3.Main for test class ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest
+  <testcase name="createOwnerTest()" classname="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" time="0.04"/>
+  <system-out><![CDATA[18:54:35.975 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Neither @ContextConfiguration nor @ContextHierarchy found for test class [CatOwnerControllerTest]: using SpringBootContextLoader
+18:54:35.980 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader -- Could not detect default resource locations for test class [ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:54:35.981 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest]: CatOwnerControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:54:36.004 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using ContextCustomizers for test class [CatOwnerControllerTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+18:54:36.063 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider -- Identified candidate component class: file [C:\Users\Aslan\IdeaProjects\is_tech2023\aslantemirkanov\Lab3\Presentation\build\classes\java\main\ru\aslantemirkanov\lab3\Main.class]
+18:54:36.065 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration ru.aslantemirkanov.lab3.Main for test class ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest
+18:54:36.161 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Using TestExecutionListeners for test class [CatOwnerControllerTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+18:54:36.163 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener -- Before test class: class [CatOwnerControllerTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.6)
+
+2023-04-28T18:54:36.430+03:00  INFO 5208 --- [    Test worker] r.a.l.p.tests.CatOwnerControllerTest     : Starting CatOwnerControllerTest using Java 19.0.2 with PID 5208 (started by Aslan in C:\Users\Aslan\IdeaProjects\is_tech2023\aslantemirkanov\Lab3\Presentation)
+2023-04-28T18:54:36.431+03:00  INFO 5208 --- [    Test worker] r.a.l.p.tests.CatOwnerControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2023-04-28T18:54:36.894+03:00  INFO 5208 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-28T18:54:36.941+03:00  INFO 5208 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 2 JPA repository interfaces.
+2023-04-28T18:54:37.469+03:00  INFO 5208 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-28T18:54:37.523+03:00  INFO 5208 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-04-28T18:54:37.805+03:00  INFO 5208 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-04-28T18:54:38.001+03:00  INFO 5208 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5458c71e
+2023-04-28T18:54:38.003+03:00  INFO 5208 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-04-28T18:54:38.021+03:00  INFO 5208 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2023-04-28T18:54:38.023+03:00  WARN 5208 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: PostgreSQL81Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect instead
+2023-04-28T18:54:38.818+03:00  INFO 5208 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-28T18:54:38.829+03:00  INFO 5208 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-28T18:54:39.117+03:00  WARN 5208 --- [    Test worker] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: ru.aslantemirkanov.lab3.dataaccess.repository.CatRepository
+2023-04-28T18:54:39.389+03:00  WARN 5208 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-28T18:54:39.717+03:00  INFO 5208 --- [    Test worker] r.a.l.p.tests.CatOwnerControllerTest     : Started CatOwnerControllerTest in 3.504 seconds (process running for 4.594)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
