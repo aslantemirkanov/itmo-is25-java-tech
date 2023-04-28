@@ -1,7 +1,22 @@
 package ru.aslantemirkanov.lab3.presentation.tests;
 
-/*
-@SpringBootTest
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import ru.aslantemirkanov.lab3.application.services.CatServiceImpl;
+import ru.aslantemirkanov.lab3.dataaccess.entities.Cat;
+import ru.aslantemirkanov.lab3.dataaccess.entities.CatColor;
+import ru.aslantemirkanov.lab3.dataaccess.repository.CatRepository;
+
+import java.time.LocalDate;
+import java.util.Optional;
+
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
 class CatControllerTest {
     @Mock
     private CatRepository catRepository;
@@ -40,4 +55,4 @@ class CatControllerTest {
 
     }
 
-}*/
+}

@@ -17,6 +17,7 @@ dependencies {
     implementation(project(mapOf("path" to ":Lab3:Application")))
     implementation(project(mapOf("path" to ":Lab3:DataAccess")))
     implementation(project(mapOf("path" to ":Lab3")))
+    testImplementation(project(mapOf("path" to ":Lab2:DataAccess")))
     compileOnly("org.projectlombok:lombok")
     runtimeOnly("org.postgresql:postgresql:42.6.0")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor:3.0.6")

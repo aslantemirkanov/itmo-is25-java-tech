@@ -1,7 +1,21 @@
 package ru.aslantemirkanov.lab3.presentation.tests;
 
-/*
-@SpringBootTest
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import ru.aslantemirkanov.lab3.application.services.CatOwnerServiceImpl;
+import ru.aslantemirkanov.lab3.dataaccess.entities.CatOwner;
+import ru.aslantemirkanov.lab3.dataaccess.repository.CatOwnerRepository;
+
+import java.time.LocalDate;
+import java.util.Optional;
+
+import static org.mockito.Mockito.when;
+
+@ExtendWith(MockitoExtension.class)
 public class CatOwnerControllerTest {
     @Mock
     private CatOwnerRepository catOwnerRepository;
@@ -22,4 +36,3 @@ public class CatOwnerControllerTest {
         Assertions.assertEquals(result.getName(), "aslan");
     }
 }
-*/
