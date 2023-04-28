@@ -8,3 +8,12 @@ include("Lab2:Application")
 findProject(":Lab2:Application")?.name = "Application"
 include("Lab2:Presentation")
 findProject(":Lab2:Presentation")?.name = "Presentation"
+include("Lab3")
+include("Lab3:Presentation")
+findProject(":Lab3:Presentation")?.name = "Presentation"
+include("Lab3:Application")
+findProject(":Lab3:Application")?.name = "Application"
+include("Lab3:DataAccess")
+findProject(":Lab3:DataAccess")?.name = "DataAccess"
+include("Lab3:Presentation")
+findProject(":Lab3:Presentation")?.name = "Presentation"
