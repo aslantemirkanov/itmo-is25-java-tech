@@ -1,20 +1,14 @@
 package ru.aslantemirkanov;
 
-import ru.aslantemirkanov.lab2.application.dto.CatColorDto;
-import ru.aslantemirkanov.lab2.application.dto.CatDto;
-import ru.aslantemirkanov.lab2.application.dto.CatOwnerDto;
 import ru.aslantemirkanov.lab2.presentation.controllers.CatController;
 import ru.aslantemirkanov.lab2.presentation.controllers.CatOwnerController;
-
-import java.time.LocalDate;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
         CatController catController = new CatController();
         CatOwnerController catOwnerController = new CatOwnerController();
-        CatDto catDto1 = catController.createCat("myaaaa1", "russia", CatColorDto.Yellow, LocalDate.now());
+/*        CatDto catDto1 = catController.createCat("myaaaa1", "russia", CatColorDto.Yellow, LocalDate.now());
         CatDto catDto2 = catController.createCat("myaaaa2", "russia", CatColorDto.Yellow, LocalDate.now());
         CatDto catDto3 = catController.createCat("myaaaa3", "russia", CatColorDto.Yellow, LocalDate.now());
         CatDto catDto4 = catController.createCat("myaaaa4", "russia", CatColorDto.Yellow, LocalDate.now());
@@ -32,10 +26,13 @@ public class Main {
         catController.addFriend(1, 2);
         catController.addFriend(1, 2);
         catController.addFriend(1, 2);
-        List<CatDto> catDtoList = catController.getAllFriends(1);
+        List<CatDto> catDtoList = catController.getAllFriends(1);*/
+        catOwnerController.addCatForOwnerById(1,1);
+        catOwnerController.deleteCatOwner(1);
+        /*
         for (CatDto catDto : catDtoList) {
             System.out.println(catDto);
-        }
+        }*/
        /* CatOwnerDto catOwnerDto = catOwnerController.createCatOwnerDto("dad7", LocalDate.now());
         catOwnerController.addCatForOwner(catDto, catOwnerDto);*/
 //        catOwnerController.addCatForOwnerById(4, 3);
