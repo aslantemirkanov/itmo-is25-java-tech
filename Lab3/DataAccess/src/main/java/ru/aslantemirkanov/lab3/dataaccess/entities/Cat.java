@@ -1,8 +1,10 @@
 package ru.aslantemirkanov.lab3.dataaccess.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Past;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.UniqueElements;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -10,7 +12,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "cats")
+@Table(name = "cats", uniqueConstraints = {@UniqueConstraint(columnNames = {"name"})})
 @Setter
 @Getter
 public class Cat {
@@ -18,6 +20,7 @@ public class Cat {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    @Past
     private LocalDate birthDate;
     private String breed;
     @ManyToMany

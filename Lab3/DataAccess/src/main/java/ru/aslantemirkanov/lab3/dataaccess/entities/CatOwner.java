@@ -1,27 +1,32 @@
 package ru.aslantemirkanov.lab3.dataaccess.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import jakarta.validation.constraints.Past;
+import lombok.Data;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "cat_owners")
-@Setter
-@Getter
+@Table(name = "cat_owners", uniqueConstraints = {@UniqueConstraint(columnNames = {"name"})})
+@Data
 public class CatOwner {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    @Past
     private LocalDate birthDate;
     @OneToMany(mappedBy = "catOwner",
             fetch = FetchType.LAZY,
             cascade = CascadeType.ALL,
             orphanRemoval = true)
     private List<Cat> cats;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
     public CatOwner() {
     }

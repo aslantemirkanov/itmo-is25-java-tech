@@ -2,10 +2,12 @@ package ru.aslantemirkanov.lab3.application.services;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import ru.aslantemirkanov.lab3.application.dto.CatDto;
 import ru.aslantemirkanov.lab3.application.dto.CatOwnerDto;
 import ru.aslantemirkanov.lab3.application.exception.owner.NoneExistCatOwnerException;
+import ru.aslantemirkanov.lab3.application.mapping.CatDtoMapping;
 import ru.aslantemirkanov.lab3.application.mapping.CatOwnerMapping;
 import ru.aslantemirkanov.lab3.dataaccess.entities.Cat;
 import ru.aslantemirkanov.lab3.dataaccess.entities.CatColor;
@@ -17,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@ComponentScan("ru.aslantemirkanov.lab3.dataaccess.repository")
 public class CatOwnerServiceImpl implements CatOwnerService {
     @Autowired
     CatOwnerRepository catOwnerRepository;
@@ -68,7 +71,14 @@ public class CatOwnerServiceImpl implements CatOwnerService {
 
     @Override
     public List<CatDto> getCatsByColor(long id, CatColor color) {
-        return null;
+        List<CatDto> catDtoList = new ArrayList<>();
+        List<Cat> cats = (List<Cat>) catRepository.findCatByColor(color);
+        for (Cat cat : cats) {
+            if (cat.getCatOwner().getId() == id) {
+                catDtoList.add(CatDtoMapping.asCatDto(cat));
+            }
+        }
+        return catDtoList;
     }
 
     @Override
