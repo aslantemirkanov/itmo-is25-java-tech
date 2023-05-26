@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="bankstests.BanksTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-05-13T11:25:34" hostname="LAPTOP-ASLAN" time="0.037">
+<testsuite name="bankstests.BanksTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-05-26T21:56:40" hostname="LAPTOP-ASLAN" time="0.097">
   <properties/>
-  <testcase name="undoTransaction()" classname="bankstests.BanksTests" time="0.022"/>
-  <testcase name="transferBetweenBank()" classname="bankstests.BanksTests" time="0.001"/>
+  <testcase name="undoTransaction()" classname="bankstests.BanksTests" time="0.04"/>
+  <testcase name="transferBetweenBank()" classname="bankstests.BanksTests" time="0.003"/>
   <testcase name="replenishmentTransaction()" classname="bankstests.BanksTests" time="0.001"/>
-  <testcase name="transferInBank()" classname="bankstests.BanksTests" time="0.004"/>
-  <testcase name="withdrawalTransaction()" classname="bankstests.BanksTests" time="0.001"/>
+  <testcase name="transferInBank()" classname="bankstests.BanksTests" time="0.02"/>
+  <testcase name="withdrawalTransaction()" classname="bankstests.BanksTests" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

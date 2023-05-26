@@ -21,3 +21,12 @@ include("Lab3:Security")
 findProject(":Lab3:Security")?.name = "Security"
 include("Lab3:Security")
 findProject(":Lab3:Security")?.name = "Security"
+include("Lab5")
+include("Lab5:CatService")
+findProject(":Lab5:CatService")?.name = "CatService"
+include("Lab5:CatOwnerService")
+findProject(":Lab5:CatOwnerService")?.name = "CatOwnerService"
+include("Lab5:UserService")
+findProject(":Lab5:UserService")?.name = "UserService"
+include("Lab5:DataService")
+findProject(":Lab5:DataService")?.name = "DataService"
