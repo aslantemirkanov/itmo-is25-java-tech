@@ -17,3 +17,7 @@ include("Lab3:DataAccess")
 findProject(":Lab3:DataAccess")?.name = "DataAccess"
 include("Lab3:Presentation")
 findProject(":Lab3:Presentation")?.name = "Presentation"
+include("Lab3:Security")
+findProject(":Lab3:Security")?.name = "Security"
+include("Lab3:Security")
+findProject(":Lab3:Security")?.name = "Security"

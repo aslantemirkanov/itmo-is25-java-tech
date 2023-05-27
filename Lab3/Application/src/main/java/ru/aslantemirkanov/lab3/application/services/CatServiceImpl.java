@@ -2,6 +2,7 @@ package ru.aslantemirkanov.lab3.application.services;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
 import ru.aslantemirkanov.lab3.application.dto.CatDto;
 import ru.aslantemirkanov.lab3.application.exception.cat.NoneExistCatException;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@ComponentScan("ru.aslantemirkanov.lab3.dataaccess.repository")
 public class CatServiceImpl implements CatService {
     @Autowired
     CatRepository catRepository;

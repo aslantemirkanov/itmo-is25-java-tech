@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import ru.aslantemirkanov.lab3.application.exception.cat.CatServiceException;
 import ru.aslantemirkanov.lab3.application.exception.owner.CatOwnerServiceException;
+import ru.aslantemirkanov.lab3.application.exception.user.UserException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
@@ -16,6 +17,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(CatOwnerServiceException.class)
     public ResponseEntity<String> handleCatOwnerException(CatOwnerServiceException e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error: " + e.getMessage());
+    }
+
+    @ExceptionHandler(UserException.class)
+    public ResponseEntity<String> handleCatException(UserException e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error: " + e.getMessage());
     }
 }

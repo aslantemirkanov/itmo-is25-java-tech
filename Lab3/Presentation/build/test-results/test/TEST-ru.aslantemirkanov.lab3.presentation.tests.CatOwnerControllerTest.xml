@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-28T16:03:56" hostname="LAPTOP-ASLAN" time="0.035">
+<testsuite name="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-13T11:26:01" hostname="LAPTOP-ASLAN" time="0.612">
   <properties/>
-  <testcase name="createOwnerTest()" classname="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" time="0.035"/>
+  <testcase name="createOwnerTest()" classname="ru.aslantemirkanov.lab3.presentation.tests.CatOwnerControllerTest" time="0.612"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

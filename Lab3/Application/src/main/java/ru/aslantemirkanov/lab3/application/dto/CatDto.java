@@ -25,7 +25,7 @@ public class CatDto {
     public CatDto(){
     }
 
-    public CatDto(String name, String breed, CatColor color, LocalDate birthDate) {
+    public CatDto(String name, String breed, CatColor color, LocalDate birthDate, CatOwnerDto catOwnerDto) {
         this.id = Long.MIN_VALUE;
         this.name = name;
         this.breed = breed;
